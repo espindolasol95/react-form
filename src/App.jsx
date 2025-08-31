@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import "bootstrap/dist/css/bootstrap.min.css";
 //array iniziale 
  const initialArticles = [ 
   {
@@ -24,9 +25,24 @@ import { useState } from 'react'
 ];
 
 function App() {
-  const [articls, setArticles] = useState([
+  //stati
+  const [articls, setArticles] = useState
+  const [newTitle, setNewTitle] = useState("");
+ //aggiunta card
+  const handleSubmint = (event) =>{
+    event.preventDefault();
+   return newTitle.trim()
+   ? (setArticles([...articles, { id: nextId, title: newTitle }]),
+        setNextId(nextId + 1),
+        setNewTitle(""))
+      : null;
    
-  ])
+     
+
+  }
+
+  
+  
 
 }
 
